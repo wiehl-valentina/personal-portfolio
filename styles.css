@@ -30,79 +30,38 @@ body {
     height: 100vh;
 }
 
-#header-container {
-    height: 22vh;
+#header {
+    height: 18vh;
     width: 100vw;
-    background-image: url(photos/navbar-wave.svg);
-    background-size: cover;
+    background-image: url(photos/navbar-wave.png);
+    background-size:cover;
     background-repeat: no-repeat;
-    display: flex;
-    align-content: flex-start;
+}
+
+#navbar {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--light-bg);
+    visibility: hidden;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    color: white; 
+    visibility: visible;
 }
 
 #navbar ul li {
     list-style: none;
+    padding: 1.2rem;
+    border-bottom: 1px solid #D9D7D4;
 }
 
 .nav-links {
-    list-style: none;
     color: var(--lilac);
     font-size: 0.8rem;
     text-decoration: none;
-}
-
-#menu-check {
-    display: none;
-}
-
-#menu-check:not(:checked) ~ nav {
-    display: none;
-}
-
-#menu-check:checked ~ nav {
-    display: block;
-}
-
-#menu {
-    display: block; 
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    /* border: 2px solid white; */
-    border-radius: 0.4rem;
-    position: absolute;
-    left: 0.5rem;
-    top: 0.8rem;
-    padding: 1px 6px;
-    z-index: 2;
-}
-
-#menu-check:not(:checked) ~ label #closed {
-    display: none;
-}
-
-#menu-check:checked ~ label #open {
-    display: none;
-}
-
-#closed {
-    color: black;
-    opacity: 0.2;
-}
-
-#menu-checked:checked ~ label #closed {
-    display: block;
-}
-
-#menu-checked:checked ~ #main-doc {
-    display: none;
-}
-
-#navbar {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: var(--light-bg);
 }
 
 #navbar ul, #navbar ul li {
@@ -111,20 +70,15 @@ body {
 }
 
 #navbar ul {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
-#navbar ul li {
-    padding: 1.2rem;
-    border-bottom: 1px solid #D9D7D4;
-}
 
 #title-container {
-    align-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-weight: 400;
+    margin-top: 1rem;
 }
 
 #title {
@@ -144,11 +98,18 @@ body {
 
 #presentation-container {
     display: flex;
+    flex-direction: column;
     margin: 3.3rem 0;    
     width: 100%;
     height: 20vh;
     padding: 1rem 4.7rem;
     background-color: rgba(186,168,204,0.6);
+    justify-content: center;
+}
+
+hr {
+    border: 0 none;
+    border-top: 1px solid white; 
 }
 
 #presentation-container p {
@@ -158,6 +119,7 @@ body {
     letter-spacing: 0.2;
     line-height: 1.2rem;
     text-align: center;
+    padding: 0.5rem;
 }
 
 #projects {
@@ -233,35 +195,44 @@ figure figcaption h2 {
         font-size: 1.2rem;
     }
 
-    #menu {
-        font-size: 1.8rem;
-        padding: 0.5rem;
-        padding-left: 1rem;
+    .menu-icon {
+        padding: 2.3rem;
+        font-size: 2.4rem;
+
     }
 
     #navbar ul li {
         padding: 1.8rem;
     }
 
+    #title-container {
+        margin-top: 2.5rem;
+    }
+
     #title {
-        font-size: 4.2rem;
+        font-size: 4.4rem;
     }
 
     #description {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     #presentation-container {
+        margin-top: 4rem;
         width: 100vw;
-        height: 22vh;
-        margin: 5.5rem 0;
+        height: 28vh;
     }
 
     #presentation-container p {
-        font-size: 1.2rem;
-        align-self: center;
+        padding: 1.4rem;
+        font-size: 1.6rem;
         line-height: 2rem;
     }
+
+    figure figcaption h2 {
+        font-size: 2.2rem;
+    }
+    
 
     #footer {
         margin: 3.8rem;
@@ -270,7 +241,7 @@ figure figcaption h2 {
 
     #footer p {
         font-size: 1rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 3rem;
     }
     
 
